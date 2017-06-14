@@ -45,8 +45,28 @@ function runAndDoAction<T: Animal>(
 runAndDoAction(new Dog(), x => x.bark());
 runAndDoAction(new Cat(), x => x.meow());
 
-const animal: Animal = new Dog();
+// @flow
 
+const animals: Animal[] = [];
+animals.push(new Dog());
+animals.push(new Cat());
+animals.push('cat'); // Error
+
+
+<RowStack baseline>
+    <RowStack.Fit>
+        Fit
+    </RowStack.Fit>
+    <RowStack.Fixed width={120}>
+        Fixed width
+    </RowStack.Fixed>
+    <RowStack.Fill>
+        Fill
+    </RowStack.Fill>
+    <RowStack.Fit>
+        Fit
+    </RowStack.Fit>
+</RowStack>
 
 // -------------------------------
 
